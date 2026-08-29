@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The 8 Figure Bounty | $BARRON</title>
+  <meta name="description" content="The 8 Figure Bounty ($BARRON) — INUZARD IS RIPPING! The only Pokémon more popular than Inuzard is Pikachu. Buy $BARRON on Solana." />
+  <link rel="icon" href="logo.png" type="image/png" />
+  <meta property="og:title" content="The 8 Figure Bounty | $BARRON" />
+  <meta property="og:description" content="INUZARD IS RIPPING! The only Pokémon more popular than Inuzard is Pikachu." />
+  <meta property="og:image" content="banner.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Fredoka:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            pika: "#FFCB05",
+            gold: "#F5C400",
+            cream: "#FFF4D6",
+            belly: "#F3E2B4",
+            cheek: "#E3350D",
+            storm: "#070B16",
+            night: "#0C1224",
+            ink: "#111111",
+          },
+          fontFamily: {
+            bangers: ["Bangers", "cursive"],
+            fredoka: ["Fredoka", "sans-serif"],
+            outfit: ["Outfit", "sans-serif"],
+            pixel: ['"Press Start 2P"', "cursive"],
+          },
+          boxShadow: {
+            bolt: "0 0 28px rgba(255,203,5,.55), 0 8px 0 #111",
+            poster: "8px 8px 0 #111, 0 0 40px rgba(255,203,5,.25)",
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    :root {
+      --pika: #ffcb05;
+      --cheek: #e3350d;
+      --ink: #111111;
+      --storm: #070b16;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Outfit", sans-serif;
+      background-color: var(--storm);
+      color: #fff4d6;
+      overflow-x: hidden;
+    }
+    .bg-clouds {
+      background-image: url("bg-clouds.jpg");
+      background-size: 720px;
+      background-repeat: repeat;
+    }
+    .hazard-tape {
+      background: repeating-linear-gradient(
+        -45deg,
+        #111 0 14px,
+        #ffcb05 14px 28px
+      );
+    }
+    .ink-border { border: 4px solid #111; }
+    .electric-glow {
+      box-shadow:
+        0 0 0 4px #111,
+        0 0 24px rgba(255, 203, 5, 0.55),
+        0 10px 0 #111;
+    }
+    .speech {
+      position: relative;
+      background: #ffcb05;
+      color: #111;
+      border: 4px solid #111;
+      border-radius: 28px;
+    }
+    .speech::after {
+      content: "";
+      position: absolute;
+      left: 42px;
+      bottom: -22px;
+      width: 0;
+      height: 0;
+      border: 14px solid transparent;
+      border-top-color: #111;
+    }
+    .speech::before {
+      content: "";
+      position: absolute;
+      left: 46px;
+      bottom: -14px;
+      width: 0;
+      height: 0;
+      border: 10px solid transparent;
+      border-top-color: #ffcb05;
+      z-index: 1;
+    }
+    .wanted-stamp {
+      transform: rotate(-12deg);
+      border: 5px solid #e3350d;
+      color: #e3350d;
+      letter-spacing: 0.18em;
+      text-shadow: none;
+      animation: stamp-pop 2.8s ease-in-out infinite;
+    }
+    @keyframes stamp-pop {
+      0%, 100% { transform: rotate(-12deg) scale(1); }
+      50% { transform: rotate(-8deg) scale(1.06); }
+    }
+    @keyframes bob {
+      0%, 100% { transform: translateY(0) rotate(-2deg); }
+      50% { transform: translateY(-16px) rotate(2deg); }
+    }
+    @keyframes flash {
+      0%, 88%, 100% { opacity: 0; }
+      90% { opacity: 0.55; }
+      92% { opacity: 0.08; }
+      94% { opacity: 0.7; }
+      96% { opacity: 0; }
+    }
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 16px rgba(255, 203, 5, 0.4), 0 8px 0 #111; }
+      50% { box-shadow: 0 0 36px rgba(255, 203, 5, 0.9), 0 8px 0 #111; }
+    }
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+    @keyframes spark {
+      0% { transform: translateY(0) scale(1); opacity: 0.9; }
+      100% { transform: translateY(-110vh) scale(0.4); opacity: 0; }
+    }
+    @keyframes bolt-flicker {
+      0%, 100% { opacity: 0.15; }
+      10% { opacity: 0.9; }
+      12% { opacity: 0.2; }
+      40% { opacity: 0.7; }
+      42% { opacity: 0.1; }
+    }
+    .bob { animation: bob 3.6s ease-in-out infinite; }
+    .flash-layer {
+      pointer-events: none;
+      animation: flash 6.5s linear infinite;
+      background: radial-gradient(circle at 60% 20%, rgba(255, 255, 255, 0.55), transparent 42%),
+                  linear-gradient(180deg, rgba(255, 203, 5, 0.22), transparent 55%);
+    }
+    .buy-pulse { animation: pulse-glow 1.8s ease-in-out infinite; }
+    .marquee-track { animation: marquee 22s linear infinite; }
+    .spark {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: #ffcb05;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #ffcb05;
+      animation: spark 7s linear infinite;
+    }
+    .section-title {
+      font-family: "Bangers", cursive;
+      letter-spacing: 0.06em;
+      -webkit-text-stroke: 3px #111;
+      paint-order: stroke fill;
+      text-shadow: 0 6px 0 #111, 0 0 24px rgba(255, 203, 5, 0.45);
+    }
+    .hero-title {
+      font-family: "Bangers", cursive;
+      letter-spacing: 0.04em;
+      line-height: 0.9;
+      -webkit-text-stroke: 4px #111;
+      paint-order: stroke fill;
+      text-shadow:
+        0 8px 0 #111,
+        0 0 32px rgba(255, 203, 5, 0.65);
+    }
+    .sticker {
+      background: rgba(7, 11, 22, 0.82);
+      border: 4px solid #111;
+      box-shadow: 8px 8px 0 #111, 0 0 28px rgba(255, 203, 5, 0.18);
+      backdrop-filter: blur(10px);
+    }
+    .step-num {
+      font-family: "Bangers", cursive;
+      -webkit-text-stroke: 3px #111;
+      paint-order: stroke fill;
+    }
+    #dexscreener-embed {
+      position: relative;
+      width: 100%;
+      padding-bottom: 125%;
+    }
+    @media (min-width: 1024px) {
+      #dexscreener-embed { padding-bottom: 62%; }
+    }
+    #dexscreener-embed iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .nav-link {
+      position: relative;
+    }
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 3px;
+      background: #ffcb05;
+      transition: width 0.2s ease;
+    }
+    .nav-link:hover::after { width: 100%; }
+    .ca-mono {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+    ::selection { background: #ffcb05; color: #111; }
+  </style>
+</head>
+<body class="bg-clouds text-cream">
+  <!-- floating sparks -->
+  <div id="sparks" class="pointer-events-none fixed inset-0 z-0 overflow-hidden"></div>
+
+  <!-- NAV -->
+  <header class="fixed top-0 left-0 right-0 z-50">
+    <div class="hazard-tape h-1.5 w-full"></div>
+    <nav class="bg-storm/90 backdrop-blur-md border-b-4 border-ink">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
+        <a href="#top" class="flex items-center gap-3">
+          <img src="logo.png" alt="Barron logo" class="h-12 w-12 rounded-full bg-white object-contain ink-border" />
+          <div class="leading-none">
+            <p class="font-bangers text-2xl tracking-wide text-pika">$BARRON</p>
+            <p class="font-fredoka text-[10px] font-semibold uppercase tracking-[0.22em] text-cream/70">8 Figure Bounty</p>
+          </div>
+        </a>
+
+        <div class="hidden items-center gap-8 font-fredoka text-sm font-semibold uppercase tracking-wider md:flex">
+          <a href="#about" class="nav-link hover:text-pika">About</a>
+          <a href="#howto" class="nav-link hover:text-pika">How to Buy</a>
+          <a href="#chart" class="nav-link hover:text-pika">Chart</a>
+        </div>
+
+        <div class="hidden items-center gap-3 md:flex">
+          <a href="https://t.me/inuchusol" target="_blank" rel="noopener" class="overflow-hidden rounded-full ink-border transition hover:scale-110" aria-label="Telegram">
+            <img src="tg.png" alt="Telegram" class="h-10 w-10" />
+          </a>
+          <a href="https://x.com/inuchusol" target="_blank" rel="noopener" class="overflow-hidden rounded-full bg-black ink-border transition hover:scale-110" aria-label="X">
+            <img src="x.png" alt="X / Twitter" class="h-10 w-10" />
+          </a>
+          <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener" class="buy-pulse rounded-full bg-pika px-5 py-2 font-bangers text-xl tracking-wide text-ink ink-border hover:bg-cream">
+            BUY NOW
+          </a>
+        </div>
+
+        <button id="menuBtn" class="md:hidden rounded-lg bg-pika px-3 py-2 font-bangers text-xl text-ink ink-border" aria-label="Open menu">☰</button>
+      </div>
+      <div id="mobileMenu" class="hidden border-t-4 border-ink bg-night px-4 py-4 md:hidden">
+        <div class="flex flex-col gap-3 font-fredoka font-semibold uppercase">
+          <a href="#about" class="rounded-lg bg-white/5 px-3 py-2">About</a>
+          <a href="#howto" class="rounded-lg bg-white/5 px-3 py-2">How to Buy</a>
+          <a href="#chart" class="rounded-lg bg-white/5 px-3 py-2">Chart</a>
+          <div class="mt-2 flex items-center gap-3">
+            <a href="https://t.me/inuchusol" target="_blank" rel="noopener"><img src="tg.png" alt="Telegram" class="h-10 w-10 rounded-full ink-border" /></a>
+            <a href="https://x.com/inuchusol" target="_blank" rel="noopener"><img src="x.png" alt="X" class="h-10 w-10 rounded-full ink-border" /></a>
+            <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener" class="flex-1 rounded-full bg-pika py-2 text-center font-bangers text-xl text-ink ink-border">BUY NOW</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="top" class="relative min-h-screen overflow-hidden pt-24">
+    <div class="absolute inset-0">
+      <img src="banner.png" alt="Barron standing in a lightning storm" class="h-full w-full object-cover object-center" />
+      <div class="absolute inset-0 bg-gradient-to-b from-storm/70 via-storm/45 to-storm"></div>
+      <div class="flash-layer absolute inset-0"></div>
+      <svg class="absolute inset-0 h-full w-full opacity-70" viewBox="0 0 1200 800" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M720 0 L690 140 L740 140 L650 320" stroke="#FFCB05" stroke-width="6" fill="none" class="origin-top" style="animation: bolt-flicker 5.2s infinite" />
+        <path d="M180 40 L210 180 L160 180 L250 380" stroke="#9B7DFF" stroke-width="4" fill="none" style="animation: bolt-flicker 7s .6s infinite" />
+        <path d="M1040 20 L1000 160 L1060 150 L980 340" stroke="#60A5FA" stroke-width="5" fill="none" style="animation: bolt-flicker 6.1s 1.2s infinite" />
+      </svg>
+    </div>
+
+    <div class="relative z-10 mx-auto grid max-w-7xl items-center gap-10 px-4 py-12 lg:grid-cols-2 lg:py-16">
+      <div>
+        <div class="speech mb-6 inline-block px-5 py-3 font-bangers text-2xl tracking-wide sm:text-3xl">
+          INUZARD IS RIPPING!
+        </div>
+        <p class="mb-3 inline-flex items-center gap-2 rounded-full bg-cheek px-4 py-1 font-fredoka text-xs font-bold uppercase tracking-[0.2em] text-white ink-border">
+          Solana Meme • Thunder Narrative
+        </p>
+        <h1 class="hero-title mt-4 text-6xl text-pika sm:text-7xl lg:text-8xl">
+          THE 8 FIGURE<br />BOUNTY
+        </h1>
+        <p class="mt-3 font-bangers text-4xl tracking-wide text-cream sm:text-5xl" style="-webkit-text-stroke:3px #111;paint-order:stroke fill;">
+          $BARRON
+        </p>
+        <p class="mt-6 max-w-xl font-fredoka text-lg font-medium leading-relaxed text-cream/95 sm:text-xl">
+          The only Pokémon more popular than Inuzard is Pikachu.
+          While Charizard energy rips the trenches, the face of the franchise just walked in.
+          This is the bounty. This is <span class="font-bold text-pika">$BARRON</span>.
+        </p>
+
+        <div class="mt-8 sticker max-w-xl rounded-2xl p-4">
+          <p class="mb-2 font-pixel text-[9px] uppercase tracking-widest text-pika">Contract Address</p>
+          <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
+            <code id="caDisplay" class="ca-mono flex-1 break-all rounded-xl bg-black/60 px-3 py-3 text-sm text-pika ink-border">TBA</code>
+            <button id="copyBtn" class="rounded-xl bg-pika px-4 py-3 font-bangers text-xl tracking-wide text-ink ink-border hover:bg-cream">
+              COPY CA
+            </button>
+          </div>
+        </div>
+
+        <div class="mt-6 flex flex-wrap items-center gap-4">
+          <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener" class="buy-pulse inline-flex items-center gap-2 rounded-full bg-pika px-8 py-4 font-bangers text-3xl tracking-wide text-ink ink-border hover:bg-cream">
+            <svg class="h-7 w-7" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 10-14h-7l0-6z"/></svg>
+            BUY NOW
+          </a>
+          <a href="https://dexscreener.com/solana/TBA" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full bg-cream px-8 py-4 font-bangers text-3xl tracking-wide text-ink ink-border hover:bg-white">
+            <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M4 19V9M10 19V5M16 19v-7M22 19V3"/></svg>
+            CHART
+          </a>
+        </div>
+      </div>
+
+      <div class="relative mx-auto w-full max-w-md">
+        <div class="wanted-stamp absolute -right-2 top-6 z-20 rounded-md bg-cream/90 px-3 py-1 font-bangers text-2xl sm:text-3xl">
+          WANTED
+        </div>
+        <div class="relative rounded-[2rem] bg-pika p-3 electric-glow">
+          <div class="rounded-[1.6rem] bg-white p-4 ink-border">
+            <img src="logo.png" alt="Barron the Pikachu inu" class="bob mx-auto w-full max-w-xs object-contain" />
+            <div class="mt-3 rounded-2xl bg-ink px-4 py-3 text-center">
+              <p class="font-pixel text-[9px] text-pika">NAME / TICKER</p>
+              <p class="font-bangers text-4xl tracking-wide text-cream">BARRON</p>
+              <p class="font-fredoka text-xs font-semibold uppercase tracking-[0.25em] text-cheek">Reward: 8 Figures</p>
+            </div>
+          </div>
+        </div>
+        <p class="mt-5 text-center font-fredoka text-sm font-semibold uppercase tracking-[0.2em] text-pika">
+          Catch the only one more popular than Inuzard
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="relative z-10 overflow-hidden border-y-4 border-ink bg-pika py-3">
+    <div class="marquee-track flex w-max gap-10 font-bangers text-2xl tracking-wide text-ink sm:text-3xl">
+      <span class="flex gap-10 px-4">
+        <span>$BARRON</span><span>⚡</span>
+        <span>THE 8 FIGURE BOUNTY</span><span>⚡</span>
+        <span>INUZARD IS RIPPING</span><span>⚡</span>
+        <span>THE ONLY POKÉMON MORE POPULAR THAN INUZARD IS PIKACHU</span><span>⚡</span>
+        <span>BUY $BARRON ON SOLANA</span><span>⚡</span>
+      </span>
+      <span class="flex gap-10 px-4" aria-hidden="true">
+        <span>$BARRON</span><span>⚡</span>
+        <span>THE 8 FIGURE BOUNTY</span><span>⚡</span>
+        <span>INUZARD IS RIPPING</span><span>⚡</span>
+        <span>THE ONLY POKÉMON MORE POPULAR THAN INUZARD IS PIKACHU</span><span>⚡</span>
+        <span>BUY $BARRON ON SOLANA</span><span>⚡</span>
+      </span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about" class="relative z-10 py-20">
+    <div class="absolute inset-0 opacity-50">
+      <img src="storm-bg.jpg" alt="" class="h-full w-full object-cover" />
+      <div class="absolute inset-0 bg-storm/80"></div>
+    </div>
+    <div class="relative mx-auto max-w-7xl px-4">
+      <p class="text-center font-pixel text-[10px] uppercase tracking-[0.3em] text-pika">Pokédex Entry No. 025+</p>
+      <h2 class="section-title mt-3 text-center text-5xl text-pika sm:text-6xl">THE NARRATIVE</h2>
+      <p class="mx-auto mt-3 max-w-2xl text-center font-fredoka text-lg text-cream/80">
+        Inuzard is ripping. Charizard energy. But the mascot of the whole franchise? That's Pikachu. That's $BARRON.
+      </p>
+
+      <div class="mt-12 grid items-center gap-8 lg:grid-cols-2">
+        <div class="relative">
+          <img src="burst.jpg" alt="" class="pointer-events-none absolute -left-10 -top-16 w-64 opacity-70 mix-blend-screen" />
+          <div class="sticker relative rounded-3xl p-6 sm:p-8">
+            <p class="font-bangers text-3xl tracking-wide text-pika sm:text-4xl">INUZARD IS RIPPING!</p>
+            <p class="mt-4 font-outfit text-lg leading-relaxed text-cream/90">
+              The trenches found a dragon. <span class="font-bold text-pika">Inuzard</span> is ripping — fire, wings, Charizard coded.
+              Everybody knows the rule though: the only Pokémon more popular than Inuzard is
+              <span class="font-bold text-pika">Pikachu</span>.
+            </p>
+            <p class="mt-4 font-outfit text-lg leading-relaxed text-cream/90">
+              <span class="font-bold text-pika">The 8 Figure Bounty</span> is that Pikachu. Yellow thunder. Red cheeks. Dog energy.
+              The face on the lunchbox. The one kids scream for. While the dragon flies, the mouse prints the culture —
+              and $BARRON is here to collect.
+            </p>
+            <div class="mt-6 grid grid-cols-3 gap-3 text-center">
+              <div class="rounded-2xl bg-pika px-2 py-3 ink-border">
+                <p class="font-pixel text-[8px] text-ink">NAME</p>
+                <p class="font-bangers text-xl text-ink sm:text-2xl">BOUNTY</p>
+              </div>
+              <div class="rounded-2xl bg-cream px-2 py-3 ink-border">
+                <p class="font-pixel text-[8px] text-ink">TICKER</p>
+                <p class="font-bangers text-xl text-ink sm:text-2xl">BARRON</p>
+              </div>
+              <div class="rounded-2xl bg-cheek px-2 py-3 ink-border">
+                <p class="font-pixel text-[8px] text-white">CHAIN</p>
+                <p class="font-bangers text-xl text-white sm:text-2xl">SOLANA</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative overflow-hidden rounded-3xl ink-border shadow-poster">
+          <img src="banner.png" alt="Barron on the mountain in a thunder storm" class="h-full w-full object-cover" />
+          <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink via-ink/80 to-transparent p-6">
+            <p class="font-bangers text-3xl text-pika">Thunder type. Culture type.</p>
+            <p class="font-fredoka text-sm uppercase tracking-[0.2em] text-cream/80">The bounty is live on Solana</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW TO BUY -->
+  <section id="howto" class="relative z-10 border-y-4 border-ink py-20">
+    <div class="mx-auto max-w-7xl px-4">
+      <p class="text-center font-pixel text-[10px] uppercase tracking-[0.3em] text-pika">Trainer Guide</p>
+      <h2 class="section-title mt-3 text-center text-5xl text-pika sm:text-6xl">HOW TO BUY</h2>
+      <p class="mx-auto mt-3 max-w-2xl text-center font-fredoka text-lg text-cream/80">
+        Four moves to catch $BARRON on Solana. Wallet, SOL, swap, confirm. That's the whole gym.
+      </p>
+
+      <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        <article class="sticker rounded-3xl p-6">
+          <div class="flex items-center justify-between">
+            <span class="step-num text-6xl text-pika">01</span>
+            <span class="flex h-14 w-14 items-center justify-center rounded-2xl bg-pika ink-border">
+              <svg class="h-8 w-8 text-ink" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 7h16v12H4z"/><path d="M8 7V5a4 4 0 018 0v2"/></svg>
+            </span>
+          </div>
+          <h3 class="mt-4 font-bangers text-3xl tracking-wide text-pika">Get a Wallet</h3>
+          <p class="mt-2 font-outfit leading-relaxed text-cream/85">
+            Download <strong>Phantom</strong> or <strong>Solflare</strong> on mobile or browser.
+            Create a Solana wallet and write down your seed phrase. Never share it. Ever.
+          </p>
+        </article>
+
+        <article class="sticker rounded-3xl p-6">
+          <div class="flex items-center justify-between">
+            <span class="step-num text-6xl text-pika">02</span>
+            <span class="flex h-14 w-14 items-center justify-center rounded-2xl bg-pika ink-border">
+              <svg class="h-8 w-8 text-ink" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="9"/><text x="12" y="16" text-anchor="middle" font-size="11" font-weight="700" fill="#FFCB05">S</text></svg>
+            </span>
+          </div>
+          <h3 class="mt-4 font-bangers text-3xl tracking-wide text-pika">Fund with SOL</h3>
+          <p class="mt-2 font-outfit leading-relaxed text-cream/85">
+            Buy <strong>SOL</strong> on an exchange, then withdraw it to your wallet address.
+            Keep a little extra SOL for network fees so the swap doesn't fail.
+          </p>
+        </article>
+
+        <article class="sticker rounded-3xl p-6">
+          <div class="flex items-center justify-between">
+            <span class="step-num text-6xl text-pika">03</span>
+            <span class="flex h-14 w-14 items-center justify-center rounded-2xl bg-pika ink-border">
+              <svg class="h-8 w-8 text-ink" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 7h10l3 5-3 5H7l-3-5 3-5z"/><path d="M9 12h6"/></svg>
+            </span>
+          </div>
+          <h3 class="mt-4 font-bangers text-3xl tracking-wide text-pika">Open the Swap</h3>
+          <p class="mt-2 font-outfit leading-relaxed text-cream/85">
+            Hit <strong>Buy Now</strong> to open Pump.fun Swap with SOL already set as input.
+            Connect the same wallet. Confirm you're on Solana.
+          </p>
+        </article>
+
+        <article class="sticker rounded-3xl p-6">
+          <div class="flex items-center justify-between">
+            <span class="step-num text-6xl text-pika">04</span>
+            <span class="flex h-14 w-14 items-center justify-center rounded-2xl bg-cheek ink-border">
+              <svg class="h-8 w-8 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L4 14h7l-1 8 10-14h-7z"/></svg>
+            </span>
+          </div>
+          <h3 class="mt-4 font-bangers text-3xl tracking-wide text-pika">Swap for $BARRON</h3>
+          <p class="mt-2 font-outfit leading-relaxed text-cream/85">
+            Paste the official CA if needed, pick your SOL amount, and confirm.
+            $BARRON lands in your wallet. Bounty collected.
+          </p>
+        </article>
+      </div>
+
+      <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
+        <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener" class="buy-pulse rounded-full bg-pika px-10 py-4 font-bangers text-3xl tracking-wide text-ink ink-border hover:bg-cream">
+          BUY $BARRON NOW
+        </a>
+        <button id="copyBtn2" class="rounded-full bg-cream px-10 py-4 font-bangers text-3xl tracking-wide text-ink ink-border hover:bg-white">
+          COPY CA
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHART -->
+  <section id="chart" class="relative z-10 py-20">
+    <div class="mx-auto max-w-7xl px-4">
+      <p class="text-center font-pixel text-[10px] uppercase tracking-[0.3em] text-pika">Live Radar</p>
+      <h2 class="section-title mt-3 text-center text-5xl text-pika sm:text-6xl">CHART</h2>
+      <p class="mx-auto mt-3 max-w-2xl text-center font-fredoka text-lg text-cream/80">
+        Dexscreener, on-chain, no filter. Watch the bounty print in real time.
+      </p>
+
+      <div class="mt-10 overflow-hidden rounded-3xl bg-night electric-glow">
+        <div id="dexscreener-embed">
+          <iframe
+            title="Dexscreener chart for $BARRON"
+            src="https://dexscreener.com/solana/TBA?embed=1&loadChartSettings=0&trades=0&tabs=0&info=0&chartLeftToolbar=0&chartTheme=dark&theme=dark&chartStyle=0&chartType=usd&interval=15"
+          ></iframe>
+        </div>
+      </div>
+
+      <div class="mt-6 text-center">
+        <a href="https://dexscreener.com/solana/TBA" target="_blank" rel="noopener" class="inline-flex items-center gap-2 font-fredoka text-sm font-bold uppercase tracking-[0.2em] text-pika hover:text-cream">
+          Open full Dexscreener ↗
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMUNITY -->
+  <section id="community" class="relative z-10 pb-20">
+    <div class="mx-auto max-w-5xl px-4">
+      <h2 class="section-title text-center text-5xl text-pika sm:text-6xl">JOIN THE HUNT</h2>
+      <p class="mx-auto mt-3 max-w-xl text-center font-fredoka text-lg text-cream/80">
+        Telegram for the pack. X for the thunder. Don't hunt the 8 figure bounty alone.
+      </p>
+      <div class="mt-10 grid gap-6 sm:grid-cols-2">
+        <a href="https://t.me/inuchusol" target="_blank" rel="noopener" class="sticker group flex items-center gap-5 rounded-3xl p-6 transition hover:-translate-y-1">
+          <img src="tg.png" alt="Telegram" class="h-16 w-16 rounded-full ink-border" />
+          <div>
+            <p class="font-pixel text-[9px] text-pika">TELEGRAM</p>
+            <p class="font-bangers text-3xl tracking-wide text-cream group-hover:text-pika">t.me/inuchusol</p>
+            <p class="font-fredoka text-sm text-cream/70">Raid, memes, live calls</p>
+          </div>
+        </a>
+        <a href="https://x.com/inuchusol" target="_blank" rel="noopener" class="sticker group flex items-center gap-5 rounded-3xl p-6 transition hover:-translate-y-1">
+          <img src="x.png" alt="X" class="h-16 w-16 rounded-full ink-border" />
+          <div>
+            <p class="font-pixel text-[9px] text-pika">X / TWITTER</p>
+            <p class="font-bangers text-3xl tracking-wide text-cream group-hover:text-pika">@inuchusol</p>
+            <p class="font-fredoka text-sm text-cream/70">Timeline of the bounty</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="relative z-10 border-t-4 border-ink bg-night">
+    <div class="hazard-tape h-2 w-full"></div>
+    <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-8 sm:flex-row">
+      <div class="flex items-center gap-3">
+        <img src="logo.png" alt="" class="h-10 w-10 rounded-full bg-white object-contain ink-border" />
+        <p class="font-bangers text-2xl tracking-wide text-pika">$BARRON</p>
+      </div>
+      <p class="text-center font-fredoka text-xs text-cream/60">
+        The 8 Figure Bounty is a meme coin on Solana. Not financial advice. DYOR. Catch at your own risk.
+      </p>
+      <div class="flex items-center gap-3">
+        <a href="https://t.me/inuchusol" target="_blank" rel="noopener"><img src="tg.png" alt="Telegram" class="h-9 w-9 rounded-full ink-border" /></a>
+        <a href="https://x.com/inuchusol" target="_blank" rel="noopener"><img src="x.png" alt="X" class="h-9 w-9 rounded-full ink-border" /></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- toast -->
+  <div id="toast" class="pointer-events-none fixed bottom-6 left-1/2 z-[80] -translate-x-1/2 translate-y-8 rounded-full bg-pika px-6 py-3 font-bangers text-xl tracking-wide text-ink opacity-0 ink-border transition-all duration-300">
+    CA copied
+  </div>
+
+  <script>
+    const CONFIG = {
+      ca: "TBA",
+      buy: "https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA",
+      chart: "https://dexscreener.com/solana/TBA",
+    };
+
+    const caEl = document.getElementById("caDisplay");
+    caEl.textContent = CONFIG.ca;
+
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+    mobileMenu.querySelectorAll("a").forEach((a) =>
+      a.addEventListener("click", () => mobileMenu.classList.add("hidden"))
+    );
+
+    function showToast(msg) {
+      const toast = document.getElementById("toast");
+      toast.textContent = msg;
+      toast.classList.remove("translate-y-8", "opacity-0");
+      toast.classList.add("translate-y-0", "opacity-100");
+      setTimeout(() => {
+        toast.classList.add("translate-y-8", "opacity-0");
+        toast.classList.remove("translate-y-0", "opacity-100");
+      }, 1800);
+    }
+
+    async function copyCA() {
+      const value = CONFIG.ca;
+      try {
+        await navigator.clipboard.writeText(value);
+        showToast("CA copied: " + value);
+      } catch {
+        const ta = document.createElement("textarea");
+        ta.value = value;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand("copy");
+        ta.remove();
+        showToast("CA copied: " + value);
+      }
+    }
+    document.getElementById("copyBtn").addEventListener("click", copyCA);
+    document.getElementById("copyBtn2").addEventListener("click", copyCA);
+
+    const sparks = document.getElementById("sparks");
+    for (let i = 0; i < 18; i++) {
+      const s = document.createElement("span");
+      s.className = "spark";
+      s.style.left = Math.random() * 100 + "%";
+      s.style.bottom = "-10px";
+      s.style.animationDelay = Math.random() * 7 + "s";
+      s.style.animationDuration = 5 + Math.random() * 5 + "s";
+      sparks.appendChild(s);
+    }
+  </script>
+</body>
+</html>
