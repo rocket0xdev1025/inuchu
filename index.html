@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The 8 Figure Bounty | $BARRON</title>
-  <meta name="description" content="The 8 Figure Bounty ($BARRON) — INUZARD IS RIPPING! The only Pokémon more popular than Inuzard is Pikachu. Buy $BARRON on Solana." />
+  <title>Corgizard | $CORGIZARD</title>
+  <meta name="description" content="Corgizard brings corgi cuteness, lizard chaos, and unstoppable meme energy straight to Solana. Buy $CORGIZARD." />
   <link rel="icon" href="logo.png" type="image/png" />
-  <meta property="og:title" content="The 8 Figure Bounty | $BARRON" />
-  <meta property="og:description" content="INUZARD IS RIPPING! The only Pokémon more popular than Inuzard is Pikachu." />
-  <meta property="og:image" content="banner.png" />
+  <meta property="og:title" content="Corgizard | $CORGIZARD" />
+  <meta property="og:description" content="Corgizard brings corgi cuteness, lizard chaos, and unstoppable meme energy straight to Solana." />
+  <meta property="og:image" content="banner.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Fredoka:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&family=Press+Start+2P&display=swap" rel="stylesheet" />
@@ -55,6 +55,7 @@
       color: #fff4d6;
       overflow-x: hidden;
     }
+    section[id] { scroll-margin-top: 5.5rem; }
     .bg-clouds {
       background-image: url("bg-clouds.jpg");
       background-size: 720px;
@@ -144,7 +145,9 @@
       40% { opacity: 0.7; }
       42% { opacity: 0.1; }
     }
-    .bob { animation: bob 3.6s ease-in-out infinite; }
+    @media (min-width: 768px) {
+      .bob { animation: bob 3.6s ease-in-out infinite; }
+    }
     .flash-layer {
       pointer-events: none;
       animation: flash 6.5s linear infinite;
@@ -198,6 +201,10 @@
     @media (min-width: 1024px) {
       #dexscreener-embed { padding-bottom: 62%; }
     }
+    @media (max-width: 640px) {
+      .hero-title { -webkit-text-stroke: 2px #111; }
+      .section-title { -webkit-text-stroke: 2px #111; }
+    }
     #dexscreener-embed iframe {
       position: absolute;
       inset: 0;
@@ -235,10 +242,10 @@
     <nav class="bg-storm/90 backdrop-blur-md border-b-4 border-ink">
       <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
         <a href="#top" class="flex items-center gap-3">
-          <img src="logo.png" alt="Barron logo" class="h-12 w-12 rounded-full bg-white object-contain ink-border" />
+          <img src="logo.png" alt="Corgizard logo" class="h-12 w-12 rounded-full bg-white object-contain ink-border" />
           <div class="leading-none">
-            <p class="font-bangers text-2xl tracking-wide text-pika">$BARRON</p>
-            <p class="font-fredoka text-[10px] font-semibold uppercase tracking-[0.22em] text-cream/70">8 Figure Bounty</p>
+            <p class="font-bangers text-2xl tracking-wide text-pika">$CORGIZARD</p>
+            <p class="font-fredoka text-[10px] font-semibold uppercase tracking-[0.22em] text-cream/70">Corgi • Lizard • Chaos</p>
           </div>
         </a>
 
@@ -249,10 +256,10 @@
         </div>
 
         <div class="hidden items-center gap-3 md:flex">
-          <a href="https://t.me/inuchusol" target="_blank" rel="noopener" class="overflow-hidden rounded-full ink-border transition hover:scale-110" aria-label="Telegram">
+          <a href="https://t.me/corgizard" target="_blank" rel="noopener" class="overflow-hidden rounded-full ink-border transition hover:scale-110" aria-label="Telegram">
             <img src="tg.png" alt="Telegram" class="h-10 w-10" />
           </a>
-          <a href="https://x.com/inuchusol" target="_blank" rel="noopener" class="overflow-hidden rounded-full bg-black ink-border transition hover:scale-110" aria-label="X">
+          <a href="https://x.com/corgizard" target="_blank" rel="noopener" class="overflow-hidden rounded-full bg-black ink-border transition hover:scale-110" aria-label="X">
             <img src="x.png" alt="X / Twitter" class="h-10 w-10" />
           </a>
           <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener" class="buy-pulse rounded-full bg-pika px-5 py-2 font-bangers text-xl tracking-wide text-ink ink-border hover:bg-cream">
@@ -268,8 +275,8 @@
           <a href="#howto" class="rounded-lg bg-white/5 px-3 py-2">How to Buy</a>
           <a href="#chart" class="rounded-lg bg-white/5 px-3 py-2">Chart</a>
           <div class="mt-2 flex items-center gap-3">
-            <a href="https://t.me/inuchusol" target="_blank" rel="noopener"><img src="tg.png" alt="Telegram" class="h-10 w-10 rounded-full ink-border" /></a>
-            <a href="https://x.com/inuchusol" target="_blank" rel="noopener"><img src="x.png" alt="X" class="h-10 w-10 rounded-full ink-border" /></a>
+            <a href="https://t.me/corgizard" target="_blank" rel="noopener"><img src="tg.png" alt="Telegram" class="h-10 w-10 rounded-full ink-border" /></a>
+            <a href="https://x.com/corgizard" target="_blank" rel="noopener"><img src="x.png" alt="X" class="h-10 w-10 rounded-full ink-border" /></a>
             <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener" class="flex-1 rounded-full bg-pika py-2 text-center font-bangers text-xl text-ink ink-border">BUY NOW</a>
           </div>
         </div>
@@ -278,9 +285,9 @@
   </header>
 
   <!-- HERO -->
-  <section id="top" class="relative min-h-screen overflow-hidden pt-24">
+  <section id="top" class="relative overflow-hidden pt-28">
     <div class="absolute inset-0">
-      <img src="banner.png" alt="Barron standing in a lightning storm" class="h-full w-full object-cover object-center" />
+      <img src="banner.jpg" alt="Corgizard standing in lizard chaos" class="h-full w-full object-cover object-center" />
       <div class="absolute inset-0 bg-gradient-to-b from-storm/70 via-storm/45 to-storm"></div>
       <div class="flash-layer absolute inset-0"></div>
       <svg class="absolute inset-0 h-full w-full opacity-70" viewBox="0 0 1200 800" preserveAspectRatio="none" aria-hidden="true">
@@ -290,27 +297,26 @@
       </svg>
     </div>
 
-    <div class="relative z-10 mx-auto grid max-w-7xl items-center gap-10 px-4 py-12 lg:grid-cols-2 lg:py-16">
-      <div>
-        <div class="speech mb-6 inline-block px-5 py-3 font-bangers text-2xl tracking-wide sm:text-3xl">
-          INUZARD IS RIPPING!
+    <div class="relative z-10 mx-auto grid max-w-7xl items-center gap-6 px-4 py-8 sm:gap-8 lg:grid-cols-2 lg:py-10">
+      <div class="order-2 min-w-0 lg:order-1">
+        <div class="speech mb-4 inline-block px-5 py-3 font-bangers text-2xl tracking-wide sm:text-3xl">
+          CORGI CUTENESS. LIZARD CHAOS.
         </div>
-        <p class="mb-3 inline-flex items-center gap-2 rounded-full bg-cheek px-4 py-1 font-fredoka text-xs font-bold uppercase tracking-[0.2em] text-white ink-border">
-          Solana Meme • Thunder Narrative
+        <p class="mb-3 inline-flex max-w-full items-center gap-2 rounded-full bg-cheek px-3 py-1 font-fredoka text-[10px] font-bold uppercase tracking-[0.16em] text-white ink-border sm:px-4 sm:text-xs sm:tracking-[0.2em]">
+          Solana Meme • Unstoppable Energy
         </p>
-        <h1 class="hero-title mt-4 text-6xl text-pika sm:text-7xl lg:text-8xl">
-          THE 8 FIGURE<br />BOUNTY
+        <h1 class="hero-title mt-2 text-5xl text-pika sm:text-6xl lg:text-7xl">
+          CORGIZARD
         </h1>
-        <p class="mt-3 font-bangers text-4xl tracking-wide text-cream sm:text-5xl" style="-webkit-text-stroke:3px #111;paint-order:stroke fill;">
-          $BARRON
+        <p class="mt-2 font-bangers text-4xl tracking-wide text-cream sm:text-5xl" style="-webkit-text-stroke:3px #111;paint-order:stroke fill;">
+          $CORGIZARD
         </p>
-        <p class="mt-6 max-w-xl font-fredoka text-lg font-medium leading-relaxed text-cream/95 sm:text-xl">
-          The only Pokémon more popular than Inuzard is Pikachu.
-          While Charizard energy rips the trenches, the face of the franchise just walked in.
-          This is the bounty. This is <span class="font-bold text-pika">$BARRON</span>.
+        <p class="mt-4 max-w-xl break-words font-fredoka text-base font-medium leading-relaxed text-cream/95 sm:text-lg">
+          Corgizard brings corgi cuteness, lizard chaos, and unstoppable meme energy straight to Solana.
+          Half loaf. Half lizard. All trenches. This is <span class="font-bold text-pika">$CORGIZARD</span>.
         </p>
 
-        <div class="mt-8 sticker max-w-xl rounded-2xl p-4">
+        <div class="mt-5 sticker max-w-xl rounded-2xl p-4">
           <p class="mb-2 font-pixel text-[9px] uppercase tracking-widest text-pika">Contract Address</p>
           <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
             <code id="caDisplay" class="ca-mono flex-1 break-all rounded-xl bg-black/60 px-3 py-3 text-sm text-pika ink-border">TBA</code>
@@ -320,34 +326,36 @@
           </div>
         </div>
 
-        <div class="mt-6 flex flex-wrap items-center gap-4">
-          <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener" class="buy-pulse inline-flex items-center gap-2 rounded-full bg-pika px-8 py-4 font-bangers text-3xl tracking-wide text-ink ink-border hover:bg-cream">
+        <div class="mt-6 flex flex-col items-stretch gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
+          <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener" class="buy-pulse inline-flex items-center justify-center gap-2 rounded-full bg-pika px-8 py-4 font-bangers text-3xl tracking-wide text-ink ink-border hover:bg-cream">
             <svg class="h-7 w-7" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 10-14h-7l0-6z"/></svg>
             BUY NOW
           </a>
-          <a href="https://dexscreener.com/solana/TBA" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full bg-cream px-8 py-4 font-bangers text-3xl tracking-wide text-ink ink-border hover:bg-white">
+          <a href="https://dexscreener.com/solana/TBA" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 rounded-full bg-cream px-8 py-4 font-bangers text-3xl tracking-wide text-ink ink-border hover:bg-white">
             <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M4 19V9M10 19V5M16 19v-7M22 19V3"/></svg>
             CHART
           </a>
         </div>
       </div>
 
-      <div class="relative mx-auto w-full max-w-md">
-        <div class="wanted-stamp absolute -right-2 top-6 z-20 rounded-md bg-cream/90 px-3 py-1 font-bangers text-2xl sm:text-3xl">
-          WANTED
-        </div>
-        <div class="relative rounded-[2rem] bg-pika p-3 electric-glow">
-          <div class="rounded-[1.6rem] bg-white p-4 ink-border">
-            <img src="logo.png" alt="Barron the Pikachu inu" class="bob mx-auto w-full max-w-xs object-contain" />
-            <div class="mt-3 rounded-2xl bg-ink px-4 py-3 text-center">
+      <div class="relative order-1 mx-auto w-full max-w-[17rem] min-w-0 sm:max-w-sm lg:order-2 lg:max-w-md">
+        <div class="relative rounded-[2rem] bg-pika p-2 electric-glow sm:p-3">
+          <div class="wanted-stamp pointer-events-none absolute right-3 top-3 z-30 rounded-md bg-cream px-3 py-1 font-bangers text-xl sm:right-4 sm:top-4 sm:text-3xl">
+            CHAOS
+          </div>
+          <div class="rounded-[1.4rem] bg-white p-2 ink-border sm:rounded-[1.6rem] sm:p-4">
+            <div class="mx-auto flex h-[200px] items-center justify-center sm:h-[260px] lg:h-[300px]">
+              <img src="logo.png" alt="Corgizard the corgi lizard" class="bob h-full w-full object-contain" />
+            </div>
+            <div class="mt-2 rounded-2xl bg-ink px-4 py-3 text-center">
               <p class="font-pixel text-[9px] text-pika">NAME / TICKER</p>
-              <p class="font-bangers text-4xl tracking-wide text-cream">BARRON</p>
-              <p class="font-fredoka text-xs font-semibold uppercase tracking-[0.25em] text-cheek">Reward: 8 Figures</p>
+              <p class="font-bangers text-4xl tracking-wide text-cream">CORGIZARD</p>
+              <p class="font-fredoka text-xs font-semibold uppercase tracking-[0.25em] text-cheek">Corgi + Lizard</p>
             </div>
           </div>
         </div>
         <p class="mt-5 text-center font-fredoka text-sm font-semibold uppercase tracking-[0.2em] text-pika">
-          Catch the only one more popular than Inuzard
+          Cuteness up front. Chaos in the tail.
         </p>
       </div>
     </div>
@@ -357,18 +365,18 @@
   <div class="relative z-10 overflow-hidden border-y-4 border-ink bg-pika py-3">
     <div class="marquee-track flex w-max gap-10 font-bangers text-2xl tracking-wide text-ink sm:text-3xl">
       <span class="flex gap-10 px-4">
-        <span>$BARRON</span><span>⚡</span>
-        <span>THE 8 FIGURE BOUNTY</span><span>⚡</span>
-        <span>INUZARD IS RIPPING</span><span>⚡</span>
-        <span>THE ONLY POKÉMON MORE POPULAR THAN INUZARD IS PIKACHU</span><span>⚡</span>
-        <span>BUY $BARRON ON SOLANA</span><span>⚡</span>
+        <span>$CORGIZARD</span><span>⚡</span>
+        <span>CORGI CUTENESS</span><span>⚡</span>
+        <span>LIZARD CHAOS</span><span>⚡</span>
+        <span>UNSTOPPABLE MEME ENERGY</span><span>⚡</span>
+        <span>STRAIGHT TO SOLANA</span><span>⚡</span>
       </span>
       <span class="flex gap-10 px-4" aria-hidden="true">
-        <span>$BARRON</span><span>⚡</span>
-        <span>THE 8 FIGURE BOUNTY</span><span>⚡</span>
-        <span>INUZARD IS RIPPING</span><span>⚡</span>
-        <span>THE ONLY POKÉMON MORE POPULAR THAN INUZARD IS PIKACHU</span><span>⚡</span>
-        <span>BUY $BARRON ON SOLANA</span><span>⚡</span>
+        <span>$CORGIZARD</span><span>⚡</span>
+        <span>CORGI CUTENESS</span><span>⚡</span>
+        <span>LIZARD CHAOS</span><span>⚡</span>
+        <span>UNSTOPPABLE MEME ENERGY</span><span>⚡</span>
+        <span>STRAIGHT TO SOLANA</span><span>⚡</span>
       </span>
     </div>
   </div>
@@ -380,35 +388,33 @@
       <div class="absolute inset-0 bg-storm/80"></div>
     </div>
     <div class="relative mx-auto max-w-7xl px-4">
-      <p class="text-center font-pixel text-[10px] uppercase tracking-[0.3em] text-pika">Pokédex Entry No. 025+</p>
-      <h2 class="section-title mt-3 text-center text-5xl text-pika sm:text-6xl">THE NARRATIVE</h2>
+      <p class="text-center font-pixel text-[10px] uppercase tracking-[0.3em] text-pika">Species Entry No. 001</p>
+      <h2 class="section-title mt-3 text-center text-5xl text-pika sm:text-6xl">THE CREATURE</h2>
       <p class="mx-auto mt-3 max-w-2xl text-center font-fredoka text-lg text-cream/80">
-        Inuzard is ripping. Charizard energy. But the mascot of the whole franchise? That's Pikachu. That's $BARRON.
+        Corgizard brings corgi cuteness, lizard chaos, and unstoppable meme energy straight to Solana.
       </p>
 
-      <div class="mt-12 grid items-center gap-8 lg:grid-cols-2">
+      <div class="mt-12 grid min-w-0 items-center gap-8 lg:grid-cols-2">
         <div class="relative">
-          <img src="burst.jpg" alt="" class="pointer-events-none absolute -left-10 -top-16 w-64 opacity-70 mix-blend-screen" />
-          <div class="sticker relative rounded-3xl p-6 sm:p-8">
-            <p class="font-bangers text-3xl tracking-wide text-pika sm:text-4xl">INUZARD IS RIPPING!</p>
+          <img src="burst.jpg" alt="" class="pointer-events-none absolute -left-10 -top-16 hidden w-64 opacity-70 mix-blend-screen lg:block" />
+          <div class="sticker relative min-w-0 rounded-3xl p-6 sm:p-8">
+            <p class="font-bangers text-3xl tracking-wide text-pika sm:text-4xl">CUTENESS MEETS CHAOS</p>
             <p class="mt-4 font-outfit text-lg leading-relaxed text-cream/90">
-              The trenches found a dragon. <span class="font-bold text-pika">Inuzard</span> is ripping — fire, wings, Charizard coded.
-              Everybody knows the rule though: the only Pokémon more popular than Inuzard is
-              <span class="font-bold text-pika">Pikachu</span>.
+              Half loaf. Half lizard. All meme. <span class="font-bold text-pika">Corgizard</span> is the stubby-legged dragon of the trenches —
+              cute enough to cuddle, chaotic enough to torch a chart. Corgi cuteness in the face. Lizard chaos in the tail.
             </p>
             <p class="mt-4 font-outfit text-lg leading-relaxed text-cream/90">
-              <span class="font-bold text-pika">The 8 Figure Bounty</span> is that Pikachu. Yellow thunder. Red cheeks. Dog energy.
-              The face on the lunchbox. The one kids scream for. While the dragon flies, the mouse prints the culture —
-              and $BARRON is here to collect.
+              Unstoppable meme energy, shipped straight to <span class="font-bold text-pika">Solana</span>.
+              No lore committee. No utility copium. Just $CORGIZARD — the creature, the ticker, the chaos.
             </p>
             <div class="mt-6 grid grid-cols-3 gap-3 text-center">
               <div class="rounded-2xl bg-pika px-2 py-3 ink-border">
                 <p class="font-pixel text-[8px] text-ink">NAME</p>
-                <p class="font-bangers text-xl text-ink sm:text-2xl">BOUNTY</p>
+                <p class="font-bangers text-xl text-ink sm:text-2xl">CORGIZARD</p>
               </div>
               <div class="rounded-2xl bg-cream px-2 py-3 ink-border">
                 <p class="font-pixel text-[8px] text-ink">TICKER</p>
-                <p class="font-bangers text-xl text-ink sm:text-2xl">BARRON</p>
+                <p class="font-bangers text-xl text-ink sm:text-2xl">CORGIZARD</p>
               </div>
               <div class="rounded-2xl bg-cheek px-2 py-3 ink-border">
                 <p class="font-pixel text-[8px] text-white">CHAIN</p>
@@ -419,10 +425,10 @@
         </div>
 
         <div class="relative overflow-hidden rounded-3xl ink-border shadow-poster">
-          <img src="banner.png" alt="Barron on the mountain in a thunder storm" class="h-full w-full object-cover" />
+          <img src="banner.jpg" alt="Corgizard on the mountain in lizard chaos" class="h-full w-full object-cover" />
           <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink via-ink/80 to-transparent p-6">
-            <p class="font-bangers text-3xl text-pika">Thunder type. Culture type.</p>
-            <p class="font-fredoka text-sm uppercase tracking-[0.2em] text-cream/80">The bounty is live on Solana</p>
+            <p class="font-bangers text-3xl text-pika">Corgi type. Lizard type.</p>
+            <p class="font-fredoka text-sm uppercase tracking-[0.2em] text-cream/80">The chaos is live on Solana</p>
           </div>
         </div>
       </div>
@@ -457,7 +463,7 @@
           <div class="flex items-center justify-between">
             <span class="step-num text-6xl text-pika">02</span>
             <span class="flex h-14 w-14 items-center justify-center rounded-2xl bg-pika ink-border">
-              <svg class="h-8 w-8 text-ink" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="9"/><text x="12" y="16" text-anchor="middle" font-size="11" font-weight="700" fill="#FFCB05">S</text></svg>
+              <svg class="h-8 w-8 text-ink" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 7v10"/></svg>
             </span>
           </div>
           <h3 class="mt-4 font-bangers text-3xl tracking-wide text-pika">Fund with SOL</h3>
@@ -514,6 +520,7 @@
       <h2 class="section-title mt-3 text-center text-5xl text-pika sm:text-6xl">CHART</h2>
       <p class="mx-auto mt-3 max-w-2xl text-center font-fredoka text-lg text-cream/80">
         Dexscreener, on-chain, no filter. Watch the bounty print in real time.
+        Pair is TBA until launch — the embed updates with the live CA.
       </p>
 
       <div class="mt-10 overflow-hidden rounded-3xl bg-night electric-glow">
@@ -541,19 +548,19 @@
         Telegram for the pack. X for the thunder. Don't hunt the 8 figure bounty alone.
       </p>
       <div class="mt-10 grid gap-6 sm:grid-cols-2">
-        <a href="https://t.me/inuchusol" target="_blank" rel="noopener" class="sticker group flex items-center gap-5 rounded-3xl p-6 transition hover:-translate-y-1">
+        <a href="https://t.me/corgizardsol" target="_blank" rel="noopener" class="sticker group flex items-center gap-5 rounded-3xl p-6 transition hover:-translate-y-1">
           <img src="tg.png" alt="Telegram" class="h-16 w-16 rounded-full ink-border" />
           <div>
             <p class="font-pixel text-[9px] text-pika">TELEGRAM</p>
-            <p class="font-bangers text-3xl tracking-wide text-cream group-hover:text-pika">t.me/inuchusol</p>
+            <p class="font-bangers text-3xl tracking-wide text-cream group-hover:text-pika">t.me/corgizardsol</p>
             <p class="font-fredoka text-sm text-cream/70">Raid, memes, live calls</p>
           </div>
         </a>
-        <a href="https://x.com/inuchusol" target="_blank" rel="noopener" class="sticker group flex items-center gap-5 rounded-3xl p-6 transition hover:-translate-y-1">
+        <a href="https://x.com/corgizardsol" target="_blank" rel="noopener" class="sticker group flex items-center gap-5 rounded-3xl p-6 transition hover:-translate-y-1">
           <img src="x.png" alt="X" class="h-16 w-16 rounded-full ink-border" />
           <div>
             <p class="font-pixel text-[9px] text-pika">X / TWITTER</p>
-            <p class="font-bangers text-3xl tracking-wide text-cream group-hover:text-pika">@inuchusol</p>
+            <p class="font-bangers text-3xl tracking-wide text-cream group-hover:text-pika">@corgizardsol</p>
             <p class="font-fredoka text-sm text-cream/70">Timeline of the bounty</p>
           </div>
         </a>
@@ -573,8 +580,8 @@
         The 8 Figure Bounty is a meme coin on Solana. Not financial advice. DYOR. Catch at your own risk.
       </p>
       <div class="flex items-center gap-3">
-        <a href="https://t.me/inuchusol" target="_blank" rel="noopener"><img src="tg.png" alt="Telegram" class="h-9 w-9 rounded-full ink-border" /></a>
-        <a href="https://x.com/inuchusol" target="_blank" rel="noopener"><img src="x.png" alt="X" class="h-9 w-9 rounded-full ink-border" /></a>
+        <a href="https://t.me/corgizardsol" target="_blank" rel="noopener"><img src="tg.png" alt="Telegram" class="h-9 w-9 rounded-full ink-border" /></a>
+        <a href="https://x.com/corgizardsol" target="_blank" rel="noopener"><img src="x.png" alt="X" class="h-9 w-9 rounded-full ink-border" /></a>
       </div>
     </div>
   </footer>
